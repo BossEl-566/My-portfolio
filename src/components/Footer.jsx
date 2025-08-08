@@ -56,7 +56,7 @@ const Footer = () => {
         {/* Copyright and Navigation */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-gray-800">
           <p className="text-gray-400 mb-4 md:mb-0">
-            © {currentYear} <span className="text-white font-medium">Elliot</span>. All rights reserved.
+            © {currentYear} <span className="text-white font-medium">Elliot Datsomor</span>. All rights reserved.
           </p>
           
           <div className="flex space-x-6">

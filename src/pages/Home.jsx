@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
 import { FiArrowRight, FiCode, FiLayers, FiCpu, FiServer } from 'react-icons/fi';
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -47,6 +48,7 @@ const Home = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link to='/projects' className="flex items-center justify-center">
               <motion.button
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.98 }}
@@ -54,6 +56,8 @@ const Home = () => {
               >
                 View My Work <FiArrowRight />
               </motion.button>
+              </Link>
+              <Link to='/contact' className="flex items-center justify-center">
               <motion.button
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.98 }}
@@ -61,6 +65,7 @@ const Home = () => {
               >
                 Contact Me
               </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -151,7 +156,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: "50+", label: "Projects Completed" },
+              { number: "10+", label: "Projects Completed" },
               { number: "100%", label: "Client Satisfaction" },
               { number: "10+", label: "Technologies Mastered" },
               { number: "∞", label: "Creative Ideas" }
@@ -192,12 +197,19 @@ const Home = () => {
               Let's collaborate to create something extraordinary. I'm just one click away.
             </p>
             <motion.button
-              whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(99, 102, 241, 0.3)" }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium text-lg"
-            >
-              Get In Touch
-            </motion.button>
+  whileHover={{ y: -3, boxShadow: "0 10px 25px -5px rgba(99, 102, 241, 0.3)" }}
+  whileTap={{ scale: 0.98 }}
+  className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium text-lg"
+  onClick={() => {
+    const phoneNumber = "233594538949"; 
+    const message = "Hello, I saw your portfolio and would like to chat!";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank"); 
+  }}
+>
+  Get In Touch
+</motion.button>
+
           </motion.div>
         </div>
       </section>
