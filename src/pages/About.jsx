@@ -7,7 +7,8 @@ const About = () => {
     { name: "Frontend", technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"] },
     { name: "Backend", technologies: ["Node.js", "Express", "MongoDB", "Firebase"] },
     { name: "Design", technologies: ["Figma", "Adobe XD", "UI/UX Principles"] },
-    { name: "Mobile", technologies: ["React Native", "Flutter"] }
+    { name: "Mobile", technologies: ["React Native", "Flutter"] },
+    { name: "AI", technologies: ["TensorFlow", "PyTorch", "Natural Language Processing"] }
   ];
 
   return (
@@ -80,7 +81,7 @@ const About = () => {
               </div>
               <div className="flex items-center">
                 <span className="text-gray-400 mr-2">Email:</span>
-                <span className="font-medium">your.email@example.com</span>
+                <span className="font-medium">datsomorelliot56@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <span className="text-gray-400 mr-2">Experience:</span>
@@ -91,7 +92,7 @@ const About = () => {
             {/* Social Links */}
             <div className="flex flex-wrap gap-4 mb-8">
               <motion.a
-                href="https://github.com/yourusername"
+                href="https://github.com/BossEl-566"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -3 }}
@@ -100,7 +101,7 @@ const About = () => {
                 <FiGithub className="text-xl" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/elliot-datsomor-972360216/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -3 }}
@@ -109,16 +110,7 @@ const About = () => {
                 <FiLinkedin className="text-xl" />
               </motion.a>
               <motion.a
-                href="https://twitter.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -3 }}
-                className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors"
-              >
-                <FiTwitter className="text-xl" />
-              </motion.a>
-              <motion.a
-                href="mailto:your.email@example.com"
+                href="mailto:datsomorelliot56@gmail.com"
                 whileHover={{ y: -3 }}
                 className="flex items-center justify-center w-10 h-10 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors"
               >
@@ -195,21 +187,27 @@ const About = () => {
             {[
               {
                 role: "Full Stack Developer",
-                company: "Tech Solutions Inc.",
-                period: "2021 - Present",
-                description: "Developed and maintained web applications using React, Node.js, and MongoDB. Led a team of 3 developers to deliver complex projects on time."
+                company: "FOGA.",
+                period: "2024 - Present",
+                description: "Developed and maintained web applications using React, Node.js, and MongoDB. Implemented RESTful APIs and integrated third-party services."
               },
               {
                 role: "Frontend Developer",
-                company: "Digital Creations",
-                period: "2019 - 2021",
+                company: "Various Freelance Projects",
+                period: "2023 - 2024",
                 description: "Implemented responsive UI components and optimized frontend performance. Collaborated with designers to create pixel-perfect interfaces."
               },
               {
-                role: "Web Development Intern",
+                role: "Junior Developer Mobile App",
                 company: "StartUp Ghana",
-                period: "2018 - 2019",
-                description: "Assisted in building company website and internal tools. Learned fundamentals of web development and project management."
+                period: "2023 - 2024",
+                description: "Assisted in the development of mobile applications using React Native. Participated in code reviews and contributed to the app's architecture."
+              },
+              {
+                role: "Intern",
+                company: "ECG (Central Region)",
+                period: "2024 - 2025",
+                description: "Assisted in various IT projects, gaining hands-on experience in software development and system administration."
               }
             ].map((exp, index) => (
               <motion.div
@@ -252,14 +250,32 @@ const About = () => {
               {
                 institution: "University of Ghana",
                 degree: "BSc Computer Science",
-                year: "2015 - 2019",
-                description: "Specialized in Software Engineering and Human-Computer Interaction."
+                year: "2022 - 2026",
+                description: "Specialized in Software Engineering, Human-Computer Interaction, Data Science and Machine Learning."
               },
               {
-                institution: "Google Certification",
-                degree: "Mobile Web Specialist",
+                institution: "IPMC",
+                degree: "Diploma in System Engineering and Networking Engineering",
                 year: "2020",
-                description: "Certified in Progressive Web Apps and mobile-first development."
+                description: "Gained foundational knowledge in computer systems, networking, and IT infrastructure management."
+              },
+              {
+                institution: "DataCamp",
+                degree: "Natural Language Processing in Python",
+                year: "2025",
+                description: "Learned to build NLP models using Python, focusing on text processing, sentiment analysis, and language generation."
+              },
+              {
+                institution: "DataCamp",
+                degree: "Promting with Python",
+                year: "2025",
+                description: "Explored advanced techniques in prompt engineering for AI models, enhancing the ability to generate context-aware responses."
+              },
+              {
+                institution: "DataCamp",
+                degree: "Machine Learning with Python",
+                year: "2025",
+                description: "Developed skills in building and deploying machine learning models using Python, focusing on supervised and unsupervised learning techniques."
               }
             ].map((edu, index) => (
               <motion.div

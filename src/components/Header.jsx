@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,15 @@ const Header = () => {
     { name: "Projects", path: "/projects" },
     { name: "Contact", path: "/contact" },
   ];
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleNavClick = (path) => {
+    setActiveLink(path);
+    setMobileMenuOpen(false); // Close menu when a link is clicked
+  };
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? "bg-gray-900/95 backdrop-blur-md py-2 shadow-xl" : "bg-gray-900/80 py-4"}`}>
@@ -62,21 +72,75 @@ const Header = () => {
           ))}
         </nav>
 
-        <motion.button 
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="hidden md:block px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:from-purple-500 hover:to-blue-400"
-        >
-          Hire Me
-        </motion.button>
+        <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="hidden md:block px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:from-purple-500 hover:to-blue-400"
+  onClick={() => {
+    const phoneNumber = "233594538949"; 
+    const message = "Hello, I’m interested in hiring you!";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank"); 
+  }}
+>
+  Hire Me
+</motion.button>
+
 
         {/* Mobile menu button */}
-        <button className="md:hidden text-gray-300 hover:text-white focus:outline-none">
+        <button 
+          onClick={toggleMobileMenu}
+          className="md:hidden text-gray-300 hover:text-white focus:outline-none"
+          aria-label="Toggle menu"
+        >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} 
+            />
           </svg>
         </button>
       </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden overflow-hidden"
+          >
+            <div className="px-6 py-4 space-y-1 bg-gray-900/95 backdrop-blur-md">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`block px-4 py-3 rounded-lg transition-all duration-300 ${activeLink === item.path ? "text-white bg-gray-800" : "text-gray-300 hover:text-white hover:bg-gray-800/50"}`}
+                  onClick={() => handleNavClick(item.path)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <button
+  className="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-full font-medium shadow-lg transition-all duration-300"
+  onClick={() => {
+    const phoneNumber = "233594538949"; // Replace with your number
+    const message = "Hello, I’d like to hire you!";
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+  }}
+>
+  Hire Me
+              </button>
+
+
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
