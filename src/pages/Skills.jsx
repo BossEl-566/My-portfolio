@@ -74,6 +74,18 @@ const Skills = () => {
         { name: "Testing", level: 82 },
         { name: "Webpack", level: 80 },
       ]
+    },
+    {
+      name: "AI & Machine Learning",
+      icon: <FiCpu className="text-3xl mb-4 text-blue-400" />,
+      skills: [
+        { name: "TensorFlow", level: 70 },
+        { name: "PyTorch", level: 65 },
+        { name: "Natural Language Processing", level: 60 },
+        { name: "Computer Vision", level: 55 },
+        { name: "Data Analysis", level: 75 },
+        { name: "Model Deployment", level: 68 },
+      ]
     }
   ];
 
@@ -169,7 +181,7 @@ const Skills = () => {
               "Mongoose", "Prisma", "tRPC", "WebSockets", "PWA", "JWT",
               "OAuth", "Stripe API", "Google Maps API", "Three.js", "GSAP",
               "Framer Motion", "Chart.js", "React Query", "Zustand", "Vite",
-              "ESLint", "Prettier", "Jira", "Agile", "Scrum"
+              "ESLint", "Prettier", "Jira", "Agile", "Scrum", 
             ].map((tech, index) => (
               <motion.div
                 key={index}

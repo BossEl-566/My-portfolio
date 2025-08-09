@@ -185,31 +185,38 @@ const About = () => {
 
           <div className="space-y-8">
             {[
-              {
-                role: "Full Stack Developer",
-                company: "FOGA.",
-                period: "2024 - Present",
-                description: "Developed and maintained web applications using React, Node.js, and MongoDB. Implemented RESTful APIs and integrated third-party services."
-              },
-              {
-                role: "Frontend Developer",
-                company: "Various Freelance Projects",
-                period: "2023 - 2024",
-                description: "Implemented responsive UI components and optimized frontend performance. Collaborated with designers to create pixel-perfect interfaces."
-              },
-              {
-                role: "Junior Developer Mobile App",
-                company: "StartUp Ghana",
-                period: "2023 - 2024",
-                description: "Assisted in the development of mobile applications using React Native. Participated in code reviews and contributed to the app's architecture."
-              },
-              {
-                role: "Intern",
-                company: "ECG (Central Region)",
-                period: "2024 - 2025",
-                description: "Assisted in various IT projects, gaining hands-on experience in software development and system administration."
-              }
-            ].map((exp, index) => (
+  {
+    role: "Intern",
+    company: "ECG (Central Region)",
+    period: "2024 - 2025",
+    description: "Assisted in various IT projects, gaining hands-on experience in software development and system administration."
+  },
+  {
+    role: "Full Stack Developer",
+    company: "FOGA.",
+    period: "2024 - Present",
+    description: "Developed and maintained web applications using React, Node.js, and MongoDB. Implemented RESTful APIs and integrated third-party services."
+  },
+  {
+    role: "Frontend Developer",
+    company: "Various Freelance Projects",
+    period: "2023 - 2024",
+    description: "Implemented responsive UI components and optimized frontend performance. Collaborated with designers to create pixel-perfect interfaces."
+  },
+  {
+    role: "Junior Developer Mobile App",
+    company: "StartUp Ghana",
+    period: "2023 - 2024",
+    description: "Assisted in the development of mobile applications using React Native. Participated in code reviews and contributed to the app's architecture."
+  },
+  {
+    role: "Bible Club Coordinator",
+    company: "Scripture Union Ghana (Central Region)",
+    period: "2019 - 2022",
+    description: "Organized and led Bible study sessions, fostering a community of faith and learning among students. Developed leadership and organizational skills."
+  }
+]
+.map((exp, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}

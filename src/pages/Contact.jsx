@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiMail, FiMapPin, FiPhone, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiMail, FiMapPin, FiPhone, FiGithub, FiLinkedin } from 'react-icons/fi';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -164,7 +164,7 @@ const Contact = () => {
                       href="mailto:office@solvexghana.com" 
                       className="text-gray-100 hover:text-blue-400 transition-colors"
                     >
-                      office@solvexghana.com
+                      datsomorelliot56@gmail.com
                     </a>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ const Contact = () => {
                       href="tel:+1234567890" 
                       className="text-gray-100 hover:text-blue-400 transition-colors"
                     >
-                      +233 XX XXX XXXX
+                      +233 59 453 8949
                     </a>
                   </div>
                 </div>
@@ -202,7 +202,7 @@ const Contact = () => {
               
               <div className="flex flex-wrap gap-4">
                 <motion.a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/BossEl-566"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -3 }}
@@ -212,23 +212,13 @@ const Contact = () => {
                 </motion.a>
 
                 <motion.a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.linkedin.com/in/elliot-datsomor-972360216/"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -3 }}
                   className="flex items-center gap-3 px-5 py-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
                 >
                   <FiLinkedin className="text-xl" /> LinkedIn
-                </motion.a>
-
-                <motion.a
-                  href="https://twitter.com/yourusername"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ y: -3 }}
-                  className="flex items-center gap-3 px-5 py-3 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
-                >
-                  <FiTwitter className="text-xl" /> Twitter
                 </motion.a>
               </div>
             </div>

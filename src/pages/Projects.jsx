@@ -152,12 +152,19 @@ const Projects = () => {
               I'm available for freelance work and exciting collaborations. Let's turn your ideas into reality.
             </p>
             <motion.button
-              whileHover={{ y: -3 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium"
-            >
-              Get In Touch
-            </motion.button>
+  whileHover={{ y: -3 }}
+  whileTap={{ scale: 0.98 }}
+  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg font-medium"
+  onClick={() => {
+    const phoneNumber = "233594538949"; 
+    const message = "Hello, I’d like to get in touch with you!";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank"); 
+  }}
+>
+  Get In Touch
+</motion.button>
+
           </div>
         </motion.div>
       </div>
