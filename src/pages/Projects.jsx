@@ -1,13 +1,21 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink, FiCode, FiUsers, FiBook } from 'react-icons/fi';
 
+// Import images directly
+import fogamsImg from "../assets/fogams.png";
+import movieImg from "../assets/movie.png";
+import quizImg from "../assets/quiz-app.png";
+import portfolioImg from "../assets/portfolio.png";
+import datlepImg from "../assets/datlep.png";
+import todoImg from "../assets/scores-page.png";
+
 const Projects = () => {
   const projects = [
     {
       title: "Church Member Management System",
       description: "A comprehensive MERN stack solution for managing church members, attendance tracking, financial records, and SMS notifications with admin dashboard.",
       tags: ["React", "Node.js", "MongoDB", "Express", "Arkesel SMS API"],
-      image: "src/assets/fogams.png", // Replace with your image path
+      image: fogamsImg,
       githubLink: "https://github.com/BossEl-566/FOGAMS",
       liveLink: "#",
       icon: <FiUsers className="text-blue-400" />
@@ -16,7 +24,7 @@ const Projects = () => {
       title: "Movie Recommendation System",
       description: "A full-stack application that recommends movies based on user preferences, featuring a sleek UI, search functionality, and personalized recommendations.",
       tags: ["React", "Node.js", "Express", "MongoDB", "Axios", "Python"],
-      image: "src/assets/movie.png", // Replace with your image path
+      image: movieImg,
       githubLink: "#",
       liveLink: "#",
       icon: <FiBook className="text-purple-400" />
@@ -25,7 +33,7 @@ const Projects = () => {
       title: "Quiz Application",
       description: "An interactive quiz app built with React, allowing users to take quizzes, view results, and track progress with a modern UI and responsive design.",
       tags: ["React", "Node.js", "Express", "tailwind CSS", "MongoDB"],
-      image: "src/assets/quiz-app.png", // Replace with your image path
+      image: quizImg,
       githubLink: "#",
       liveLink: "#",
       icon: <FiCode className="text-blue-400" />
@@ -34,7 +42,7 @@ const Projects = () => {
       title: "Portfolio Website Template",
       description: "Modern, responsive portfolio template for creatives and developers with dark/light mode and CMS integration.",
       tags: ["React", "Framer Motion", "Tailwind CSS", "Sanity.io"],
-      image: "src/assets/portfolio.png", // Replace with your image path
+      image: portfolioImg,
       githubLink: "#",
       liveLink: "#",
       icon: <FiCode className="text-purple-400" />
@@ -43,7 +51,7 @@ const Projects = () => {
       title: "E-commerce mobile application",
       description: "A fully functional e-commerce mobile app built with React Native, featuring product listings, cart management, and secure payment integration.",
       tags: ["React Native", "Redux", "Firebase", "Stripe API"],
-      image: "src/assets/datlep.png", // Replace with your image path
+      image: datlepImg,
       githubLink: "#",
       liveLink: "#",
       icon: <FiCode className="text-blue-400" />
@@ -52,7 +60,7 @@ const Projects = () => {
       title: "Todo List Application",
       description: "A simple yet effective todo list application built with React, allowing users to create, edit, and delete tasks with a clean interface.",
       tags: ["React", "Redux", "Local Storage"],
-      image: "src/assets/scores-page.png", // Replace with your image path
+      image: todoImg,
       githubLink: "#",
       liveLink: "#",
       icon: <FiCode className="text-purple-400" />
