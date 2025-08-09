@@ -6,26 +6,26 @@ const Projects = () => {
     {
       title: "Church Member Management System",
       description: "A comprehensive MERN stack solution for managing church members, attendance tracking, financial records, and SMS notifications with admin dashboard.",
-      tags: ["React", "Node.js", "MongoDB", "Express", "Twilio API"],
-      image: "/church-management.jpg", // Replace with your image path
-      githubLink: "#",
+      tags: ["React", "Node.js", "MongoDB", "Express", "Arkesel SMS API"],
+      image: "src/assets/fogams.png", // Replace with your image path
+      githubLink: "https://github.com/BossEl-566/FOGAMS",
       liveLink: "#",
       icon: <FiUsers className="text-blue-400" />
     },
     {
-      title: "Daily Bible Verse App",
-      description: "A progressive web app that delivers daily Bible verses with bookmarking, sharing features, and offline functionality using service workers.",
-      tags: ["React", "Node.js", "REST API", "PWA", "LocalStorage"],
-      image: "/bible-app.jpg", // Replace with your image path
+      title: "Movie Recommendation System",
+      description: "A full-stack application that recommends movies based on user preferences, featuring a sleek UI, search functionality, and personalized recommendations.",
+      tags: ["React", "Node.js", "Express", "MongoDB", "Axios", "Python"],
+      image: "src/assets/movie.png", // Replace with your image path
       githubLink: "#",
       liveLink: "#",
       icon: <FiBook className="text-purple-400" />
     },
     {
-      title: "E-commerce Platform",
-      description: "Full-featured online store with product management, cart system, payment processing, and admin dashboard.",
-      tags: ["Next.js", "Stripe", "Firebase", "Tailwind CSS", "Redux"],
-      image: "/ecommerce.jpg", // Replace with your image path
+      title: "Quiz Application",
+      description: "An interactive quiz app built with React, allowing users to take quizzes, view results, and track progress with a modern UI and responsive design.",
+      tags: ["React", "Node.js", "Express", "tailwind CSS", "MongoDB"],
+      image: "src/assets/quiz-app.png", // Replace with your image path
       githubLink: "#",
       liveLink: "#",
       icon: <FiCode className="text-blue-400" />
@@ -34,7 +34,25 @@ const Projects = () => {
       title: "Portfolio Website Template",
       description: "Modern, responsive portfolio template for creatives and developers with dark/light mode and CMS integration.",
       tags: ["React", "Framer Motion", "Tailwind CSS", "Sanity.io"],
-      image: "/portfolio-template.jpg", // Replace with your image path
+      image: "src/assets/portfolio.png", // Replace with your image path
+      githubLink: "#",
+      liveLink: "#",
+      icon: <FiCode className="text-purple-400" />
+    },
+    {
+      title: "E-commerce mobile application",
+      description: "A fully functional e-commerce mobile app built with React Native, featuring product listings, cart management, and secure payment integration.",
+      tags: ["React Native", "Redux", "Firebase", "Stripe API"],
+      image: "src/assets/datlep.png", // Replace with your image path
+      githubLink: "#",
+      liveLink: "#",
+      icon: <FiCode className="text-blue-400" />
+    },
+    {
+      title: "Todo List Application",
+      description: "A simple yet effective todo list application built with React, allowing users to create, edit, and delete tasks with a clean interface.",
+      tags: ["React", "Redux", "Local Storage"],
+      image: "src/assets/scores-page.png", // Replace with your image path
       githubLink: "#",
       liveLink: "#",
       icon: <FiCode className="text-purple-400" />
